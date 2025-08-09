@@ -30,7 +30,7 @@ Configure and test basic firewall rules to allow or block traffic in **Windows**
     netsh advfirewall set allprofiles state off
     ```
 
-📸 **[Screenshot](screenshots/enable_disable_cmd.png):** enable_disable_cmd.png
+📸 **[Screenshot](screenshots/):** enable_disable_cmd.png
 
 ---
 
@@ -42,7 +42,7 @@ Configure and test basic firewall rules to allow or block traffic in **Windows**
     and press **Enter**.
 2. This opens **Windows Defender Firewall with Advanced Security**.
 
-📸 **[Screenshot](screenshots/firewall_main.png):** firewall_main.png
+📸 **[Screenshot](screenshots/):** firewall_main.png
 
 ---
 
@@ -50,7 +50,7 @@ Configure and test basic firewall rules to allow or block traffic in **Windows**
 1. In the left panel, click **Inbound Rules**.
 2. Scroll to see all existing rules (Allowed / Blocked).
 
-📸 **[Screenshot](screenshots/inbound_rules.png):** inbound_rules.png
+📸 **[Screenshot](screenshots/):** inbound_rules.png
 
 ---
 
@@ -62,7 +62,7 @@ Configure and test basic firewall rules to allow or block traffic in **Windows**
 5. Check **Domain**, **Private**, and **Public** profiles → **Next**.
 6. Name the rule (e.g., `Block Telnet Port 23`) → **Finish**.
 
-📸 **[Screenshot](screenshots/block_port23.png):** block_port23.png
+📸 **[Screenshot](screenshots/):** block_port23.png
 
 ---
 
@@ -78,7 +78,7 @@ Configure and test basic firewall rules to allow or block traffic in **Windows**
 3. You should see:  
    **"Could not open connection"** (blocked).
 
-📸 **[Screenshot](screenshots/telnet_test.png):** telnet_test.png
+📸 **[Screenshot](screenshots/):** telnet_test.png
 
 ---
 
@@ -86,7 +86,7 @@ Configure and test basic firewall rules to allow or block traffic in **Windows**
 1. Go back to **Inbound Rules**.
 2. Right-click on `Block Telnet Port 23` → **Delete** (or Disable).
 
-📸 **[Screenshot](screenshots/remove_rule.png):** remove_rule.png
+📸 **[Screenshot](screenshots/):** remove_rule.png
 
 ---
 

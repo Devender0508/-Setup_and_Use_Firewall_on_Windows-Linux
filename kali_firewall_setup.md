@@ -1,4 +1,4 @@
-# 🛡️ Kali Linux Firewall Configuration with UFW
+# 🛡️ Kali Linux Firewall Configuration with UFW - Cybersecurity Internship
 
 ## 🎯 Objective
 Configure and test basic firewall rules using **UFW** (Uncomplicated Firewall) in Kali Linux, and understand how firewall rules filter network traffic.
@@ -20,7 +20,7 @@ Configure and test basic firewall rules using **UFW** (Uncomplicated Firewall) i
 sudo apt update
 sudo apt install ufw -y
 ```
-📸 **Screenshot:** `screenshots/` **install_ufw.png**
+**[Screenshot](screenshots/):** install_ufw.png`
 
 ---
 
@@ -37,7 +37,7 @@ sudo ufw disable
 ```bash
 sudo ufw status verbose
 ```
-📸 **Screenshot:** `screenshots`  **enable_disable_status.png**
+**[Screenshot](screenshots/):** enable_disable_status.png`
 
 ---
 
@@ -45,7 +45,7 @@ sudo ufw status verbose
 ```bash
 sudo ufw allow 22/tcp
 ```
-📸 **Screenshot:** `screenshots`  **allow_ssh.png**
+**[Screenshot](screenshots/):** allow_ssh.png`
 
 💡 **Note:**  
 If you are configuring UFW on a **remote Kali system**, this step is **critical** to avoid losing your SSH connection.  
@@ -57,7 +57,7 @@ UFW blocks incoming connections by default, so adding this rule ensures that rem
 ```bash
 sudo ufw status numbered
 ```
-📸 **Screenshot:** `screenshots`  **list_rules.png**
+**[Screenshot](screenshots/):** list_rules.png`
 
 **Example Output (Before Adding Rules):**
 ```plaintext
@@ -73,7 +73,7 @@ Status: active
 ```bash
 sudo ufw deny 23/tcp
 ```
-📸 **Screenshot:** `screenshots`  **block_port23.png**
+**[Screenshot](screenshots/):** block_port23.png`
 
 **Example Output (After Blocking Port 23):**
 ```plaintext
@@ -100,7 +100,7 @@ telnet localhost 23
 ```
 You should see **"Connection refused"** (blocked by firewall).
 
-📸 **Screenshot:** `screenshots`  **telnet_test.png**
+**[Screenshot](screenshots/):** telnet_test.png`
 
 ---
 
@@ -114,7 +114,7 @@ sudo ufw status numbered
 sudo ufw delete 3
 sudo ufw delete 4
 ```
-📸 **Screenshot:** `screenshots/remove_rule.png`
+**[Screenshot](screenshots/):** remove_rule.png`
 
 **Example Output (After Removing the Rule):**
 ```plaintext
@@ -154,11 +154,6 @@ Status: active
 
 
 ---
-
-## ✅ Outcome
-- Learned to **install, enable, and disable** UFW.
-- Created and tested **custom port block rule** in Linux.
-- Verified firewall behavior using Telnet.
 
 
 

@@ -1,4 +1,4 @@
-# 🔐 Windows Firewall Configuration & Testing - Cybersecurity Internship
+# 🔐 Windows Firewall Configuration & Testing 
 
 ## 🎯 Objective
 Configure and test basic firewall rules to allow or block traffic in **Windows**, and understand how Windows Defender Firewall filters network traffic.
@@ -17,31 +17,32 @@ Configure and test basic firewall rules to allow or block traffic in **Windows**
 
 ### **Step 1 – Enable or Disable Windows Defender Firewall (Command Prompt)**
 
-**Open Command Prompt as Administrator** (Search for `cmd`, right-click, select **Run as administrator**).
+**Open Command Prompt as Administrator**  
+(Search for `cmd`, right-click, select **Run as administrator**)
 
 - **Enable Firewall for All Profiles**:
-```cmd
-netsh advfirewall set allprofiles state on
-```
+    ```cmd
+    netsh advfirewall set allprofiles state on
+    ```
 
 - **Disable Firewall for All Profiles**:
-```cmd
-netsh advfirewall set allprofiles state off
-```
+    ```cmd
+    netsh advfirewall set allprofiles state off
+    ```
 
-📸 **Screenshot:** `screenshots/enable_disable_cmd.png`
+📸 **[Screenshot](screenshots/enable_disable_cmd.png):** enable_disable_cmd.png
 
 ---
 
 ### **Step 2 – Open the Windows Firewall Configuration Tool**
 1. Press **`Windows + R`**, type:
-```
-wf.msc
-```
-and press **Enter**.
+    ```cmd
+    wf.msc
+    ```
+    and press **Enter**.
 2. This opens **Windows Defender Firewall with Advanced Security**.
 
-📸 **Screenshot:** `screenshots/firewall_main.png`
+📸 **[Screenshot](screenshots/firewall_main.png):** firewall_main.png
 
 ---
 
@@ -49,7 +50,7 @@ and press **Enter**.
 1. In the left panel, click **Inbound Rules**.
 2. Scroll to see all existing rules (Allowed / Blocked).
 
-📸 **Screenshot:** `screenshots/inbound_rules.png`
+📸 **[Screenshot](screenshots/inbound_rules.png):** inbound_rules.png
 
 ---
 
@@ -61,22 +62,23 @@ and press **Enter**.
 5. Check **Domain**, **Private**, and **Public** profiles → **Next**.
 6. Name the rule (e.g., `Block Telnet Port 23`) → **Finish**.
 
-📸 **Screenshot:** `screenshots/block_port23.png`
+📸 **[Screenshot](screenshots/block_port23.png):** block_port23.png
 
 ---
 
 ### **Step 5 – Test the Rule**
 1. Install Telnet Client (if not already installed):
-```cmd
-dism /online /Enable-Feature /FeatureName:TelnetClient
-```
+    ```cmd
+    dism /online /Enable-Feature /FeatureName:TelnetClient
+    ```
 2. In **Command Prompt**:
-```cmd
-telnet 127.0.0.1 23
-```
-3. You should see: **"Could not open connection"** (blocked).
+    ```cmd
+    telnet 127.0.0.1 23
+    ```
+3. You should see:  
+   **"Could not open connection"** (blocked).
 
-📸 **Screenshot:** `screenshots/telnet_test.png`
+📸 **[Screenshot](screenshots/telnet_test.png):** telnet_test.png
 
 ---
 
@@ -84,7 +86,7 @@ telnet 127.0.0.1 23
 1. Go back to **Inbound Rules**.
 2. Right-click on `Block Telnet Port 23` → **Delete** (or Disable).
 
-📸 **Screenshot:** `screenshots/remove_rule.png`
+📸 **[Screenshot](screenshots/remove_rule.png):** remove_rule.png
 
 ---
 
@@ -112,10 +114,3 @@ telnet 127.0.0.1 23
 
 ---
 
-## ✅ Outcome
-- Learned to **enable/disable** Windows Defender Firewall from **Command Prompt**.
-- Created and tested **custom port block rule**.
-- Verified firewall functionality by simulating blocked connections.
-
-
----

@@ -1,5 +1,4 @@
-# Setup_and_Use_Firewall_on_Windows-Linux
-# 🔐 Windows Firewall Configuration & Testing
+# 🔐 Windows Firewall Configuration & Testing - Cybersecurity Internship
 
 ## 🎯 Objective
 Configure and test basic firewall rules to allow or block traffic in **Windows**, and understand how Windows Defender Firewall filters network traffic.
@@ -30,7 +29,8 @@ netsh advfirewall set allprofiles state on
 netsh advfirewall set allprofiles state off
 ```
 
-📸 **Screenshot:** 
+📸 **Screenshot:** `screenshots/enable_disable_cmd.png`
+
 ---
 
 ### **Step 2 – Open the Windows Firewall Configuration Tool**
@@ -41,7 +41,7 @@ wf.msc
 and press **Enter**.
 2. This opens **Windows Defender Firewall with Advanced Security**.
 
-📸 **Screenshot:**
+📸 **Screenshot:** `screenshots/firewall_main.png`
 
 ---
 
@@ -49,7 +49,7 @@ and press **Enter**.
 1. In the left panel, click **Inbound Rules**.
 2. Scroll to see all existing rules (Allowed / Blocked).
 
-📸 **Screenshot:**
+📸 **Screenshot:** `screenshots/inbound_rules.png`
 
 ---
 
@@ -61,7 +61,7 @@ and press **Enter**.
 5. Check **Domain**, **Private**, and **Public** profiles → **Next**.
 6. Name the rule (e.g., `Block Telnet Port 23`) → **Finish**.
 
-📸 **Screenshot:** 
+📸 **Screenshot:** `screenshots/block_port23.png`
 
 ---
 
@@ -76,7 +76,7 @@ telnet 127.0.0.1 23
 ```
 3. You should see: **"Could not open connection"** (blocked).
 
-📸 **Screenshot:**
+📸 **Screenshot:** `screenshots/telnet_test.png`
 
 ---
 
@@ -84,7 +84,7 @@ telnet 127.0.0.1 23
 1. Go back to **Inbound Rules**.
 2. Right-click on `Block Telnet Port 23` → **Delete** (or Disable).
 
-📸 **Screenshot:** 
+📸 **Screenshot:** `screenshots/remove_rule.png`
 
 ---
 
@@ -101,8 +101,14 @@ telnet 127.0.0.1 23
 ---
 
 ## 📂 Deliverables
-- **Screenshots folder**:
-  **windows section**
+- **Screenshots folder**: `screenshots/`
+  - `enable_disable_cmd.png`
+  - `firewall_main.png`
+  - `inbound_rules.png`
+  - `block_port23.png`
+  - `telnet_test.png`
+  - `remove_rule.png`
+
 
 ---
 
